@@ -47,7 +47,6 @@ def start():
                 if not data:
                     tcpClient.close()
                     break
-                tcpClient.send(data.encode())
                 return data.replace('\n', '')
         except Exception as e:
             tcpClient.close()
